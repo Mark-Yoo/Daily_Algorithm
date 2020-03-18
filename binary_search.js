@@ -6,17 +6,13 @@ function binarySearch(array, target) {
   let finish = array.length - 1;
   
   // while문을 이용해 특정 조건에 도달하기 전까지 계속해서 돌린다. 이진 탐색의 경우에는 중간 값이 target값과 같을 때에 나와야 하므로 시작점과 끝나는 지점이 계속해서 달라진다. 결국 두 점이 교차하는 부분이 생기므로 교차하게 되면 while문을 종료한다.
-  while(begin >= finish) {
+  while(begin <= finish) {
     const middle = Math.floor((begin + finish) / 2);
-    console.log(middle);
-
     if (array[middle] === target) return middle;
     if (array[middle] > target) {
       finish = middle - 1;
-      console.log(finish);
     } else {
       begin = middle + 1;
-      console.log(begin)
     }
   }
   return -1;
