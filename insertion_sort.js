@@ -6,10 +6,10 @@ function swapNum(array, index1, index2) {
 }
 
 function insertionSort(array) {
-  for(let i = 1; i < array.length; i++) {
-    for(let j = i; j > 0; j--) {
-      if(array[j] < array[j-1]) {
-        swapNum(array, j, j-1);
+  for(let i = 0; i < array.length; i++) {
+    for(let j = i; j >= 0; j--) {
+      if(array[j] > array[j + 1]) {
+        swapNum(array, j, j + 1);
       }
     } 
   }
