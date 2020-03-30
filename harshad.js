@@ -12,9 +12,7 @@
 
 function isHarshad(n){
   const numtoStr = (n + '').split('');
-  let sumNum = 0
-  numtoStr.forEach(num => sumNum += +num);
-  return Number.isInteger(n / sumNum);
+  return Number.isInteger(n / numtoStr.reduce((acc, cur) => (+acc) + (+cur), 0));
 }
 
 console.log(isHarshad(10)); // true
