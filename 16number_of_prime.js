@@ -21,3 +21,4 @@ function numberOfPrime(n) {
 console.log(numberOfPrime(10)); // 4
 console.log(numberOfPrime(20)); // 8
 console.log(numberOfPrime(100)); // 25
+console.log(numberOfPrime(200)); // 46
