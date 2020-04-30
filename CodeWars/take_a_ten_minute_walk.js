@@ -4,7 +4,7 @@
 
 // Note: you will always receive a valid array containing a random assortment of direction letters ('n', 's', 'e', or 'w' only). It will never give you an empty array (that's not a walk, that's standing still!).
 
-// 파라미터로 전달되는 배열은 동, 서, 남, 북 4방향을 가리키는 글자들을 가지고 있다. 이 배열에 따라 한 블록씩 이동할 때마다 1분씩 소요된다. 산책이 모두 끝난 후에는 다시 집으로 돌아와야 하며, 총 시간은 10분이 넘거나 10분보다 부족헤서는 안된다.
+// 파라미터로 전달되는 배열은 동, 서, 남, 북 4방향을 가리키는 글자들을 가지고 있다. 이 배열에 따라 한 블록씩 이동할 때마다 1분씩 소요된다. 산책이 모두 끝난 후에는 다시 집으로 돌아와야 하며, 총 시간은 10분이 넘거나 10분보다 부족해서는 안된다.
 
 function isValidWalk(walk) {
   let EtoW = 0;
