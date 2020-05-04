@@ -43,6 +43,24 @@
 //   return result.filter(innerArr => innerArr[1] === ints[Math.min(...distance)]);
 // }
 
+// 이중for문이 아닌 하나의 숫자를 한 번씩 비교해가는 방법
+// 배열의 크기가 늘어날수록 위의 코드보다 배열을 순회하는 횟수가 현저하게 줄어들기 때문에 성능에서 유리하다.
+
+var sum_pairs=function(ints, s){
+  let pairSet = new Set();
+  pairSet.add(ints[0]);
+
+  for (let i = 1; i < ints.length; i++) {
+    let pairNum = s - ints[i];
+    if (pairSet.has(pairNum)) {
+      console.log([pairNum, ints[i]]);
+      return [pairNum, ints[i]];
+    }
+    pairSet.add(ints[i]);
+  }
+  return undefined;
+}
+
 l1= [1, 4, 8, 7, 3, 15];
 l2= [1, -2, 3, 0, -6, 1];
 l3= [20, -13, 40];
