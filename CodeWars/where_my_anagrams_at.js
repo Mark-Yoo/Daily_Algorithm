@@ -17,6 +17,8 @@
 
 // anagrams('laser', ['lazing', 'lazy',  'lacer']) => []
 
+// still working on the codes
+
 function anagrams(word, words) {
   const sortedWord = word
     .split("")
