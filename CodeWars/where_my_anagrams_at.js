@@ -19,6 +19,8 @@
 
 // still working on the codes
 
+// 모든 글자를 sort처리 하여 비교
+
 function anagrams(word, words) {
   const sortedWord = word
     .split("")
