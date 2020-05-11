@@ -22,6 +22,7 @@ function anagrams(word, words) {
     .split("")
     .sort((a, b) => (a > b ? 1 : a < b ? -1 : 0))
     .join("");
+    
   const sortedWords = [...words].map((innerword) =>
     innerword
       .split("")
