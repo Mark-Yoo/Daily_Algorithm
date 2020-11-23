@@ -8,3 +8,4 @@ Examples are from leetcode, codewars, and programmers
 
 # 코딩을 위한 언어선택 (자바스크립트)
 - 시간복잡도에 따른 소요시간을 조금이라도 줄이기 위해 파이썬도 고려
+- 알고리즘 기초부터
