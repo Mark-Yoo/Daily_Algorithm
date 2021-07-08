@@ -17,7 +17,7 @@
 //     }
 //   }
 
-// 번거로운 형변환 없이 숫자만을 계산하여 만든 알고리즘
+// 번거로운 형변환 없이 숫자만을 계산하여 만든 코드
 function solution(numArr) {
   let answer = Number.MIN_SAFE_INTEGER;
   let biggestNum = Number.MIN_SAFE_INTEGER;
