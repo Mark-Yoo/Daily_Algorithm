@@ -1,19 +1,36 @@
 // 1부터 100 사이의 자연수 n개 중에는 같은 숫자가 중복으로 여러장 있을 수 있으며 이 중 3장을 뽑아 합했을 때 m번째로 큰 수를 찾으시오.
+// function solution(n, m, arr) {
+//   let answer = 0;
+//   let count = 1;
+//   arr.sort((a, b) => b - a);
+
+//   for (let i = 0; i < n; i++) {
+//     for (let j = i + 1; j < n; j++) {
+//       for (let k = j + 1; k < n; k++) {
+//         if (count === m) {
+//           return (answer += arr[i] + arr[j] + arr[k]);
+//         }
+//         count++;
+//       }
+//     }
+//   }
+// }
+
+// Set 생성자 함수를 활용하여 임의의 자료구조를 만들어 중복값을 제거하고 모든 결과값을 구하는 방법
+// 이전의 방법은 중복값이 없을 경우에는 문제가 없으나, 중복값이 있을 경우 순서가 뒤바뀔 수 있으므로 문제의 여지가 있는 코드이다.
 function solution(n, m, arr) {
   let answer = 0;
-  let count = 1;
-  arr.sort((a, b) => b - a);
-
+  let temporaryStructure = new Set();
   for (let i = 0; i < n; i++) {
     for (let j = i + 1; j < n; j++) {
       for (let k = j + 1; k < n; k++) {
-        if (count === m) {
-          return (answer += arr[i] + arr[j] + arr[k]);
-        }
-        count++;
+        temporaryStructure.add(arr[i] + arr[j] + arr[k]);
       }
     }
   }
+  let sortedStructure = Array.from(temporaryStructure).sort((a, b) => b - a);
+  answer = sortedStructure[m - 1];
+  return answer;
 }
 
 let arr = [13, 15, 34, 23, 45, 65, 33, 11, 26, 42];
