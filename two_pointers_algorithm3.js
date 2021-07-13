@@ -3,8 +3,8 @@
 function solution(sumNum, arr) {
   let answer = 0;
   let pointer1 = 0;
-  let pointer2 = 1;
-  let temporarySum = arr[pointer1];
+  let pointer2 = 0;
+  let temporarySum = 0;
 
   while (pointer1 < arr.length && pointer2 < arr.length) {
     if (temporarySum > sumNum) {
