@@ -37,7 +37,6 @@
 
 // 이중 for문을 사용하지 않고 만들어보기
 function compare(map1, map2) {
-  console.log(map1.size);
   if (map1.size !== map2.size) return false;
   for (let [key, val] of map1) {
     if (!map2.has(key) || map2.get(key) !== val) return false;
@@ -52,7 +51,7 @@ function solution(str1, str2) {
 
   for (let x of str2) {
     if (hashMap1.has(x)) hashMap1.set(x, hashMap1.get(x) + 1);
-    else hashMap2.set(x, 1);
+    else hashMap1.set(x, 1);
   }
 
   let len = str2.length - 1;
