@@ -65,6 +65,7 @@ function solution(str1, str2) {
     else hashMap2.set(str1[j], 1);
     if (compare(hashMap1, hashMap2)) answer++;
     hashMap2.set(str1[pointer1], hashMap2.get(str1[pointer1]) - 1);
+    // 지우지 않으면 오류가 발생할 확률이 늘어나므로 반드시 삭제하도록 하자
     if (hashMap2.get(str1[pointer1]) === 0) hashMap2.delete(str1[pointer1]);
     pointer1++;
   }
