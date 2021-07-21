@@ -7,11 +7,10 @@ function solution(lazer) {
     if (lazer[i] === "(") {
       tempArr.push(lazer[i]);
     } else {
+      tempArr.pop();
       if (lazer[i - 1] === "(") {
-        tempArr.pop();
         answer += tempArr.length;
       } else {
-        tempArr.pop();
         answer += 1;
       }
     }
