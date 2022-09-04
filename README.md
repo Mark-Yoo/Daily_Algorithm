@@ -13,6 +13,8 @@ Examples are from leetcode, codewars, and programmers
 - 모두의 알고리즘
 - Tensor Flow 라이브러리 활용을 위한 알고리즘 공부
 
+# 알고리즘 효율성을 위한 언어 공부 추가 (파이썬)
+
 # Trie
 
 - Trie는 보통 검색어의 자동완성 등에 사용될 수 있는 알고리즘
