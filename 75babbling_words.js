@@ -38,3 +38,25 @@ function solution(babbling) {
     
     return answer;
 }
+
+// final answer
+function solution(babbling) {
+    let answer = 0;
+    let wordList = ["aya", "ye", "woo", "ma"];
+    
+    for (const babbleWord of babbling) {
+        let target = babbleWord;
+        for (const babbleEx of wordList) {
+            if (babbleWord.includes(babbleEx.repeat(2))) {
+                break;
+            }
+            target = target.split(babbleEx).join(" ");
+        }
+        
+        if (target.split(" ").join("").length === 0) {
+            answer += 1;
+        }
+    }
+    
+    return answer;
+}
