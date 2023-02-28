@@ -15,8 +15,6 @@ function solution(keymap, targets) {
                     tempIndex = keymap[k].indexOf(targetLetter) + 1;
                     if (tempIndex > temp2 && temp2 !== 0) {
                         tempIndex = temp2;
-                    } else if (temp2 === 0) {
-                        tempIndex = tempIndex;
                     }
                 } else if (keymap[k].indexOf(targetLetter) === -1 &&
                           tempIndex === 0) {
@@ -25,14 +23,13 @@ function solution(keymap, targets) {
             }
 
             if (tempIndex === 0) {
-                answer.push(-1);
-                return answer;
+                count = -1;
+                break;
             } else {
                 count += tempIndex;
             }
         }
         answer.push(count);
     }
-    
     return answer;
 }
