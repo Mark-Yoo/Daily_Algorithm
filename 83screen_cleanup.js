@@ -29,7 +29,8 @@ function solution(wallpaper) {
                 }
                 
                 firstX = j;
-            } else if (lastX < j) {
+            }
+            if (lastX < j + 1) {
                 lastX = j + 1;
             }
         }
