@@ -1,0 +1,12 @@
+function solution(r1, r2) {
+    let answer = 0;
+    let r2InnerSquareWidth = Math.pow((r2 * 2) - 1, 2);
+    let r1InnerSquareWidth = Math.pow((r1 * 2) - 1, 2);
+    
+    console.log(r2InnerSquareWidth);
+    console.log(r1InnerSquareWidth);
+    
+    answer = r2InnerSquareWidth - r1InnerSquareWidth + 4;
+    
+    return answer;
+}
