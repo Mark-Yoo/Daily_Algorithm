@@ -10,3 +10,32 @@ function solution(r1, r2) {
     
     return answer;
 }
+
+// Working solution - Need understanding of Pythagorean theorem
+function getY(xNum, rNum, rType) {
+    const maxY = Math.sqrt(Math.pow(rNum, 2) - Math.pow(xNum, 2));
+    const maxYInt = parseInt(maxY);
+    
+    if (rType === "r1" && maxY - maxYInt === 0.0) {
+        return maxYInt - 1;
+    } else {
+        return maxYInt;
+    }
+}
+
+function solution(r1, r2) {
+    let answer = 0;
+    
+    for (let i = 1; i < r2; i++) {
+        if (i < r1) {
+            answer += getY(i, r2, "r2") - getY(i, r1, "r1");
+        } else {
+            answer += getY(i, r2, "r2");
+        }
+    }
+    
+    answer = answer * 4;
+    answer += (r2 - r1 + 1) * 4;
+    
+    return answer;
+}
