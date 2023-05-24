@@ -31,7 +31,11 @@ function solution(answers) {
         hashMap.set(j + 1, answer[j]);
     }
     
-    [...hashMap.entries()].sort((a, b) => b[1] - a[1]).map(person => result.push(person[0]));
-    
+    let maxCorrectNum = Math.max(...answer);
+    [...hashMap.entries()].sort((a, b) => b[1] - a[1])
+        .map(person => {
+            if (person[1] === maxCorrectNum) result.push(person[0])
+    });
+
     return result;
 }
