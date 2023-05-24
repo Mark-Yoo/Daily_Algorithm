@@ -1,11 +1,13 @@
 function solution(answers) {
     let answer = [];
+    let result = [];
     let tempAnswer1 = [1, 2, 3, 4, 5];
     let tempAnswer2 = [2, 1, 2, 3, 2, 4, 2, 5];
     let tempAnswer3 = [3, 3, 1, 1, 2, 2, 4, 4, 5, 5];
     let countAnswer1 = 0;
     let countAnswer2 = 0;
     let countAnswer3 = 0;
+    let hashMap = new Map();
     
     for (let i = 0; i < answers.length; i++) {
         if (answers[i] === tempAnswer1[i % tempAnswer1.length]) {
@@ -21,8 +23,15 @@ function solution(answers) {
         }
     }
     
-    console.log(countAnswer1);
-    console.log(countAnswer2);
-    console.log(countAnswer3);
-    return answer;
+    answer.push(countAnswer1);
+    answer.push(countAnswer2);
+    answer.push(countAnswer3);
+    
+    for (let j = 0; j < 3; j++) {
+        hashMap.set(j + 1, answer[j]);
+    }
+    
+    [...hashMap.entries()].sort((a, b) => b[1] - a[1]).map(person => result.push(person[0]));
+    
+    return result;
 }
